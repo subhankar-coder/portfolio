@@ -30,7 +30,7 @@ export function Form(){
                     </h1>
                     <ChevronDoubleDownIcon className="text-red w-10 inline-block m-2 animate-bounce" />
                     </div>
-                    <form name='contact' onSubmit={handleSubmit} className="border-4 border-blue-700 flex flex-col md:m-15 md:p-20 p-5 mt-8">
+                    <form name='contact' onSubmit={handleSubmit} className="border-4 border-blue-600 flex flex-col md:m-15 md:p-20 p-5 mt-8 hover:border-blue-800 rounded ">
                         <div className=" mb-4">
                             <label htmlFor="name" className="leading-7 text-sm text-gray-400">
                             Name

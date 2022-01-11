@@ -1,5 +1,6 @@
 import {CodeIcon} from "@heroicons/react/solid";
 import React from "react";
+import { SocialIcon } from "react-social-icons";
 import { projects } from "../data";
 
 export default function Projects(){
@@ -34,19 +35,12 @@ export default function Projects(){
                                         </h2>
                                     </p>
                                 <p className="leading-relaxed indent-6 m-5 text-start">{project.description}</p>
-                            </div>
-                            {/* <div className="flex relative">
-                                <img alt={project.image} className="absolute inset-0 w-full h-full object-cover object-center" src={require(`${project.image}`)}/>
-                                <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-400 bg-gray-900 opacity-0 hover:opacity-100">
-                                    <h1 className="title-font text-lg font-medium text-white mb-3">
-                                        {project.title}
-                                    </h1>
-                                    <h2 className="tracking-widest text-sm title-font font-medium text-green-400 mb-1">
-                                        {project.techStack}
-                                    </h2>
-                                    <p className="leading-relaxed">{project.description}</p>
+
+                                <div className="flex flex-row m-5 items-center">
+                                    <SocialIcon network='github' url='https://github.com/subhankar-biswas-dot' bgColor='white' className='pl-5 mx-3 opacity-80 hover:opacity-100 hover:animate-pulse ' /> 
+                                    <SocialIcon label="our portfolio" className="pl-5 mx-1 opacity-80 hover:opacity-100 hover:animate-pulse"/>
                                 </div>
-                            </div> */}
+                            </div>
                         </div>
                         
                     )}

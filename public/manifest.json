@@ -1,9 +1,9 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Subhankar's Portfolio",
+  "name": "Creating a customized portfolio for my own",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "header.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
