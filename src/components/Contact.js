@@ -16,7 +16,7 @@ export function Contact(){
                         <h2 className='title-font font-semibold text-green-400 tracking-widest text-lg text-center'>
                             ADDRESS 🏠
                         </h2>
-                        <p className='mt-1 mx-auto '>
+                        <p className='mt-1 mx-auto pl-4'>
                             SUBHANKAR BISWAS <br />
                             RAJARHAT BISHNUPUR GHOSHPARA,<br />
                             DISTRICT-24 PGS(N),<br />
@@ -30,7 +30,7 @@ export function Contact(){
                         <h2 className='title-font font-semibold text-green-400 text-lg text-center'>
                             EMAIL & PHONE 📬
                         </h2>
-                        <p className='mt-3'>
+                        <p className='mt-3 pl-2 pb-2'>
                             <div className='flex inline-flex'><PhoneIcon className='mx-auto w-10 mb-4' /> <span className='text-center  align-text-bottom'> +91-6289369640 </span> </div><br />
                             <div className='flex inline-flex'><MailIcon className='mx-auto w-10 mb-4 ' /> <p className='text-center align-text-bottom text-ellipsis overflow-hidden' > coder.subhankar@gmail.com</p></div> <br />
                             <span className='flex flex-wraper' >
