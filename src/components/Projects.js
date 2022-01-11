@@ -17,8 +17,25 @@ export default function Projects(){
                 </div>
                 <div className="flex flex-wrap -m-4">
                     {projects.map((project)=>
-                        <a href={project.link} key={project.image} className="sm:w-1/2 w-100 p-4">
-                            <div className="flex relative">
+                        <div key={project.image} className="lg:w-1/2 w-full p-4">
+                            <div className="border-4 border-gray-400 hover:border-gray-600 w-full h-full">
+                                <div className=" flex flex-col mb-4 mt-2">
+                                    <h1  className="title-font text-lg font-medium text-white uppercase">
+                                        {project.title}
+                                    </h1>
+                                    <h2 className="font-thin text-xs ">
+                                        ( {project.timeline} )
+                                    </h2>
+                                </div>
+                                    <p className="text-clip overflow-hidden ">
+
+                                        <h2 className="tracking-tightest text-sm title-font font-medium text-green-500 mb-2 text-center">
+                                            {project.techStack} 
+                                        </h2>
+                                    </p>
+                                <p className="leading-relaxed indent-6 m-5 text-start">{project.description}</p>
+                            </div>
+                            {/* <div className="flex relative">
                                 <img alt={project.image} className="absolute inset-0 w-full h-full object-cover object-center" src={require(`${project.image}`)}/>
                                 <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-400 bg-gray-900 opacity-0 hover:opacity-100">
                                     <h1 className="title-font text-lg font-medium text-white mb-3">
@@ -29,8 +46,8 @@ export default function Projects(){
                                     </h2>
                                     <p className="leading-relaxed">{project.description}</p>
                                 </div>
-                            </div>
-                        </a>
+                            </div> */}
+                        </div>
                         
                     )}
                 </div>

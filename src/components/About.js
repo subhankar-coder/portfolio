@@ -10,9 +10,8 @@ export default function About(){
                     <h2 className="tracking-widest text-lg title-font font-medium text-blue-500 mb-1">A Computer Science 🖥️ Enthusiast .</h2>
                     <br className="hidden lg:inline-block" /> 
                     
-                    <p className="mb-8 leading:relaxed">
-                    I'm a final year under grad student 🎓. Passionate about various fields of computer science 💻 and engineering.
-                    Including full stack web development, machine learning, deep learning, artificial intelligence, devops, cloud, bigdata analytics to name a few...... 
+                    <p className="mb-8 mt-2" align="left" >
+                    I'm a final year under grad student 🎓. Passionate about various fields of computer science 💻 and engineering.Including full stack web development, machine learning, deep learning, artificial intelligence, devops, cloud,bigdata analytics to name a few...... 
                     </p>
                     <div className="flex justify-center">
                         <a href="#contact" className="inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg">

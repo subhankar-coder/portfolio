@@ -2,22 +2,19 @@ import { ChevronDoubleDownIcon } from "@heroicons/react/solid";
 import React from "react";
 
 export function Form(){
-    const [name,setName]=React.useState("");
-    const [email,setEmail]=React.useState("");
-    const [message,setMessage]=React.useState("");
-
-    function encode(data){
-        return Object.keys(data).map(
-            (key)=> encodeURIComponent(key)+"="+encodeURIComponent(data[key])
-        ).join("&")
-    }
-    function handleSubmit(e){
+    const [name,setName]=React.useState();
+    const [email,setEmail]=React.useState();
+    const [message,setMessage]=React.useState();
+    const handleSubmit=(e)=>{
+        console.log("here");
         e.preventDefault();
-        fetch("/",{
+        fetch("http://localhost:4000/post",{
             method:"POST",
-            headers:{"Content-Type":"application/x-www-form-urlencoded"},
-            body: encode({"form-name":"contact", name,email,message})
-        }).then(()=>alert("Message sent successfully!")).catch((error)=>alert(error))
+            headers:{"Content-Type":"application/json","Accept":"application/json"},
+            body: JSON.stringify({name:name,email:email,message:message})
+        }).then(()=>alert("Message sent successfully!")
+        
+        ).catch((error)=>alert(error))
     }
     return(
         <section id='hire'>
@@ -33,7 +30,7 @@ export function Form(){
                     </h1>
                     <ChevronDoubleDownIcon className="text-red w-10 inline-block m-2 animate-bounce" />
                     </div>
-                    <form name='contact' onSubmit={handleSubmit} netlify className="border-4 border-blue-700 flex flex-col md:m-15 md:p-20 p-5 mt-8">
+                    <form name='contact' onSubmit={handleSubmit} className="border-4 border-blue-700 flex flex-col md:m-15 md:p-20 p-5 mt-8">
                         <div className=" mb-4">
                             <label htmlFor="name" className="leading-7 text-sm text-gray-400">
                             Name
