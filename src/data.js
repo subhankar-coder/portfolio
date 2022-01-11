@@ -33,4 +33,4 @@ export const projects=[
     },
 ];
 
-export const skills = [{name:"C/C++ "},{name:"JAVA"},{name:"PYTHON"},{name:"JS"},{name:"SQL"},{name:"AWS"},{name:"DEV OPS"},{name:"MACHINE LEARNING"},{name:"BIG DATA"},{name:"KAFKA"},{name:"DESIGN PATTERN"},{name:"AGILE"}];
+export const skills = [{name:"C/C++ "},{name:"JAVA"},{name:"PYTHON"},{name:"JS"},{name:"SQL"},{name:"AWS"},{name:"DEV OPS"},{name:"MACHINE LEARNING"},{name:"BIG DATA"},{name:"KAFKA"},{name:"DESIGN PATTERN"},{name:"AGILE"},{name:"DEEP LEARNING"},{name:"NURAL NETWORK"},{name:"TENSORFLOW"},{name:"C#"},{name:"TAILWIND CSS"},{name:"APACHE SPARK"}];

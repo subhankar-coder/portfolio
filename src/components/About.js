@@ -7,7 +7,7 @@ export default function About(){
                     <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
                         Hello 👋 From Subhankar
                     </h1>
-                    <h2 className="tracking-widest text-lg title-font font-medium text-blue-500 mb-1">A Computer Science  Enthusiast .</h2>
+                    <h2 className="tracking-widest text-lg title-font font-medium text-blue-500 mb-1">A Computer Science  Enthusiast.</h2>
                     <br className="hidden lg:inline-block" /> 
                     
                     <p className="mb-8 mt-2" align="left" >

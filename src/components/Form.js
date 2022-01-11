@@ -1,21 +1,40 @@
 import { ChevronDoubleDownIcon } from "@heroicons/react/solid";
-import React from "react";
+import {React,useState} from "react";
+
 
 export function Form(){
-    const [name,setName]=React.useState();
-    const [email,setEmail]=React.useState();
-    const [message,setMessage]=React.useState();
-    const handleSubmit=(e)=>{
-        console.log("here");
-        e.preventDefault();
-        fetch("http://localhost:4000/post",{
+    const [values,setValues]=useState({
+        name:'',email:'',description:''
+    });
+    const set= (name)=>{
+        return({target:{value}})=>{
+            setValues(oldValues=>({...oldValues,[name]:value}))
+        }
+    }
+    const saveFormData = async()=>{
+        const response = await fetch("http://localhost:8080/post",{
             method:"POST",
             headers:{"Content-Type":"application/json","Accept":"application/json"},
-            body: JSON.stringify({name:name,email:email,message:message})
-        }).then(()=>alert("Message sent successfully!")
-        
-        ).catch((error)=>alert(error))
+            body: JSON.stringify(values)
+        });
+        if(response.status!=200){
+            throw new Error( `Request not valid : ${response.status}`)
+        }
     }
+    const handleSubmit=async (e)=>{
+        e.preventDefault();
+        try{
+            await saveFormData();
+            alert("Message sent successfully!");
+            setValues({
+                name:'',email:'',description:''
+            })
+        }
+        catch(e){
+            alert( `Delivery Falied ${e.message}`)
+        }
+    }
+
     return(
         <section id='hire'>
             <div className="mx-auto container p-5">
@@ -30,7 +49,7 @@ export function Form(){
                     </h1>
                     <ChevronDoubleDownIcon className="text-red w-10 inline-block m-2 animate-bounce" />
                     </div>
-                    <form name='contact' onSubmit={handleSubmit} className="border-4 border-blue-600 flex flex-col md:m-15 md:p-20 p-5 mt-8 hover:border-blue-800 rounded ">
+                    <form name='contact' onSubmit={handleSubmit} className="border-4 border-blue-600 flex flex-col md:m-25 md:p-25 p-5 mt-8 hover:border-blue-800 rounded m-9">
                         <div className=" mb-4">
                             <label htmlFor="name" className="leading-7 text-sm text-gray-400">
                             Name
@@ -39,19 +58,20 @@ export function Form(){
                             type="text"
                             id="name"
                             name="name"
-                            onChange={(e)=>setName(e.target.name)}
+                            value={values.name}
+                            onChange={set('name')}
                             className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                             />
                         </div>
                         <div className="mb-4">
                             <label htmlFor="email" className="leading-7 text-sm text-gray-400">Email</label>
                             <input
-                                type="email" id="email" name="email" onChange={(e)=>setEmail(e.target.email)} className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                                type="email" id="email" name="email"  className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" value={values.email} onChange={set('email')}/>
                         </div>
 
                         <div className="mb-4">
-                            <label htmlFor="message" className="leading-7 text-sm text-gray-400">Message For Me</label>
-                            <textarea id="message" name="message" onChange={(e)=>setMessage(e.target.message)} className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-6 resize-none transition-colors duration-200 ease-in-out" />
+                            <label htmlFor="description" className="leading-7 text-sm text-gray-400" >Message For Me</label>
+                            <textarea id="description" name="description" value={values.description} onChange={set('description')} className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-6 resize-none transition-colors duration-200 ease-in-out" />
                         </div>
                         <div className="mt-8">
                             <button type="submit" className="text-white rounded bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 cursor-wait">
