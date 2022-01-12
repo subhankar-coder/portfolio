@@ -4,20 +4,29 @@ import Projects from "./components/Projects";
 import { Skills } from "./components/Skills";
 import { Form } from "./components/Form";
 import { NavBar } from "./components/NavBar";
-import {useEffect} from "react";
+import {useEffect,useState} from "react";
+import Education from "./components/Education";
+import WorkExperience from "./components/WorkExperience";
+import Scroll from "./components/Scroll";
 function App() {
-  useEffect(() => {
-    document.title="Subhankar's Portfolio"
-  }, []);
+    useEffect(()=>{
+      document.title="Subhankar's PortFolio 🌎"
+
+    },[]);
   return (
-    <main className="text-gray-400 bg-gray-900 body-font">
-      <NavBar />
-      <About />
-      <Projects />
-      <Skills />
-      <Form />
-      <Contact />
-    </main>
+  
+      <main className="text-gray-400 bg-gray-900 body-font">
+        <NavBar />
+        <About />
+        <Education />
+        <WorkExperience />
+        <Projects />
+        <Skills />
+        <Form />
+        <Contact />
+        <Scroll />
+        
+      </main>
   )}
 
 export default App;
