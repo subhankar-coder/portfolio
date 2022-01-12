@@ -4,7 +4,7 @@ import Projects from "./components/Projects";
 import { Skills } from "./components/Skills";
 import { Form } from "./components/Form";
 import { NavBar } from "./components/NavBar";
-import {useEffect,useState} from "react";
+import {useEffect} from "react";
 import Education from "./components/Education";
 import WorkExperience from "./components/WorkExperience";
 import Scroll from "./components/Scroll";

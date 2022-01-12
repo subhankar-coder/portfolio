@@ -10,7 +10,7 @@ export default function Scroll() {
             else if(showButton && window.pageYOffset<50)
                 setShowButton(false);
         })
-    },[]);
+    });
 
     const scrollToTop=()=>{
         window.scrollTo({

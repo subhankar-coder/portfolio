@@ -41,14 +41,14 @@ export const education=[
         highestDegree:"Matriculation",
         year:"2015-2016",
         percentage:"91.7%",
-        remarks:"stood 3rd in school"
+        remarks:"Stood 3rd in school"
     },
     {
         name:"Bishnupur Sir Ramesh Institution",
         highestDegree:"Higher Secondary",
         year:"2016-2018",
         percentage:"92.1%",
-        remarks:"stood 1st in school"
+        remarks:"Stood 3rd in school"
     },
     {
         name:"National Institute Of technology,Tiruchirappalli",
