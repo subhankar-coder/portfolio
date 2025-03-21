@@ -1,10 +1,9 @@
-import { ChevronDoubleDownIcon } from "@heroicons/react/solid";
 import {React,useState} from "react";
-
+import {ChevronDoubleDownIcon} from "@heroicons/react/24/solid";
 
 export function Form(){
     const [values,setValues]=useState({
-        name:'',email:'',description:''
+        name:'',email:'',mobile:'',description:''
     });
     const set= (name)=>{
         return({target:{value}})=>{
@@ -67,6 +66,11 @@ export function Form(){
                             <label htmlFor="email" className="leading-7 text-sm text-gray-400">Email</label>
                             <input
                                 type="email" id="email" name="email"  className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" value={values.email} onChange={set('email')}/>
+                        </div>
+                        <div className="mb-4">
+                            <label htmlFor="mobile" className="leading-7 text-sm text-gray-400">Phone Number</label>
+                            <input
+                                type="tel" id="mobile" name="mobile"  pattern="[0-9]{10}" className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" value={values.mobile} onChange={set('mobile')}/>
                         </div>
 
                         <div className="mb-4">

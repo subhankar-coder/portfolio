@@ -7,19 +7,18 @@ export default function About(){
                     <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
                         Hello 👋 From Subhankar
                     </h1>
-                    <h2 className="tracking-widest text-lg title-font font-medium text-blue-500 mb-1">A Computer Science  Enthusiast.</h2>
+                        <h2 className="tracking-widest text-lg title-font font-medium text-blue-500 mb-1">Visionary AI-Driven Software Engineer | Cloud & Backend Innovator</h2>
                     <br className="hidden lg:inline-block" /> 
                     
                     <p className="mb-8 mt-2" align="left" >
-                    I'm a final year under grad student 🎓. Passionate about various fields of computer science 💻 and engineering.Including full stack web development, machine learning, deep learning, artificial intelligence, devops, cloud,bigdata analytics to name a few...... 
-                    </p>
+                        Expert in harnessing GenAI, LLMs, and RAG models to automate complex workflows, drive cloud-native microservices, and optimize backend systems with Java Spring Boot, Redis, and Google Cloud, delivering high-impact, scalable solutions.</p>
                     <div className="flex justify-center">
-                        <a href="#contact" className="inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg">
-                            Egar to Work with Me!
+                        <a href="#contact" className="inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg no-underline">
+                            Let's Catch Up
                         </a>
 
-                        <a href="#workexperience" className="ml-4 inline-flex text-gray-400 bg-gray-700 border-0 py-2 px-6 focus:outline-none hover:bg-gray-800 rounded text-lg">
-                            My previous works 👨‍💼
+                        <a href="#workexperience" className="ml-4 inline-flex text-gray-400 bg-gray-700 border-0 py-2 px-6 focus:outline-none hover:bg-gray-800 rounded text-lg no-underline">
+                            Experiences 👨‍💼
                         </a>
                     </div>
                     

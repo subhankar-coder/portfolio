@@ -1,6 +1,7 @@
-import { BookOpenIcon } from '@heroicons/react/solid'
+
 import React from 'react'
 import { education } from '../data'
+import {BookOpenIcon} from "@heroicons/react/24/solid";
 
 
 export default function Education() {
@@ -11,9 +12,9 @@ export default function Education() {
                 <h1 className='sm:text-4xl text-3xl font-medium title-font text-white mb-12'>EDUCATION</h1>
             </div>
             <div className='flex flex-wrap -m-4'>
-                {education.map((education)=>
+                {education.map((education,index)=>
 
-                    <div className='lg:w-1/2 w-full p-4'>
+                    <div key={education.id || index} className='lg:w-1/2 w-full p-4'>
                         <div className='flex flex-col p-5 mt-2 mb-3 border-4 items-center border-gray-400 hover:border-gray-700'>
                             <div className='w-full h-full'>
 
