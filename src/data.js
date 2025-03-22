@@ -64,7 +64,7 @@ export const projects=[
     },
 ];
 
-export const skills = [{name:"JAVA"},{name:"SPRING BOOT"},{name:"PYTHON"},{name:"JAVA SCRIPT"},{name:"GCP CLOUD"},{name:"LLM"},{name:"REDIS"},{name:"DOCKER"},{name:"MONGODB"},{name:"KUBERNETES"},{name:"LINUX"},{name:"GEN AI"},{name:"AI"},{name:"GO"},{name:"OPENSHIFT"},{name:"CLOUD MIGRATION"},{name:"AUTOMATED TESTING"},{name:"KARATE"},{name:"SELENIUM"},{name:"CUCUMBER BDD"}];
+export const skills = [{name:"JAVA"},{name:"SPRING BOOT"},{name:"PYTHON"},{name:"JAVA SCRIPT"},{name:"GCP CLOUD"},{name:"LLM"},{name:"REDIS"},{name:"DOCKER"},{name:"MONGODB"},{name:"KUBERNETES"},{name:"LINUX"},{name:"GEN AI"},{name:"LANGCHAIN"},{name:"RAG"},{name:"GO"},{name:"OPENSHIFT"},{name:"CLOUD MIGRATION"},{name:"AUTOMATED TESTING"},{name:"KARATE"},{name:"SELENIUM"},{name:"CUCUMBER BDD"}];
 
 export const education=[
     {
